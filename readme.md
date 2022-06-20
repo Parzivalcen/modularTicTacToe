@@ -2,4 +2,4 @@
 
 ### gameBoardArray.js
 - `gameboard` gets you a board
-- `positionIndex` takes a board and an index position, it returns what is in that position. 
+- `positionIndex` takes an index position, it returns what is in that position. 

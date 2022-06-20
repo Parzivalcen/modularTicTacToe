@@ -12,7 +12,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer:{
-    static: './dist',
+    static: './dist'
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -22,5 +22,17 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+     {
+       test: /\.(png|svg|jpg|jpeg|gif)$/i,
+       type: 'asset/resource',
+     },
+    ],
   },
 };
