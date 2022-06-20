@@ -3,7 +3,7 @@ import createBoard from './page/htmlBoard.js';
 import {gameboard, positionIndex } from './game/gameBoardArray.js';
 import {player} from './game/players.js';
 import checkWinner from './game/checkWinner.js';
-import placeSymbol from './page/placeSymbol.js';
+import startPlay from './page/startPlay.js';
 import {humanPlay} from './game/humanPlay.js';
 import './styles.css'
 
@@ -18,7 +18,7 @@ btnPlay.addEventListener('click', (e) => {
   e.preventDefault();
   document.querySelector('.container--home').remove();
   main.appendChild(createBoard());
-  placeSymbol()
+  startPlay()
 })
 
 

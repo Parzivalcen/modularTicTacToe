@@ -1,6 +1,6 @@
 import { humanPlay } from "../game/humanPlay";
 
-const placeSymbol = () => {
+const startPlay = () => {
   document.querySelector('.board-container').addEventListener('click', (e) =>{
     let symbolHTML = e.target.firstChild;
     console.log(symbolHTML);
@@ -11,4 +11,4 @@ const placeSymbol = () => {
     }
   })
 } 
-export default placeSymbol;
+export default startPlay;

@@ -1,20 +1,14 @@
 import {player} from './players.js'
 import {gameboard} from './gameBoardArray.js';
 import checkWinner from './checkWinner.js';
-import placeSymbol from '../page/placeSymbol.js';
+// Get position from player
+import {getPositionFromPlayer, PositionOnDOMboard} from '../page/getPosition.js';
 
 
 const player1 = player(1);
 const player2 = player(2);
 let _played1 = false
 let _played2 = false
-// Get position from player
-// Get position with query selector//
-const getPositionFromPlayer = (e) => {
-  let symbolHTML = e.target.firstChild;
-  return +symbolHTML.getAttribute("data-box");
-  
-}
 const humanPlay = (e, X, O) => {
   
   let box = getPositionFromPlayer(e);
@@ -23,7 +17,7 @@ const humanPlay = (e, X, O) => {
   if (_played1) 
   {
       console.log(O)
-      e.target.firstChild.innerHTML = O;
+      PositionOnDOMboard(e, O);
       player2.play(box);
       
       _played2 = true;
@@ -34,7 +28,7 @@ const humanPlay = (e, X, O) => {
     else 
     {
       
-      e.target.firstChild.innerHTML = X;
+      PositionOnDOMboard(e, X);
       // populate board Array
       player1.play(box);
       
