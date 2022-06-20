@@ -1,10 +1,8 @@
 import homePage from './home.js';
 import createBoard from './page/htmlBoard.js';
 import {gameboard, positionIndex } from './game/gameBoardArray.js';
-import {player} from './game/players.js';
 import checkWinner from './game/checkWinner.js';
 import startPlay from './page/startPlay.js';
-import {humanPlay} from './game/humanPlay.js';
 import './styles.css'
 
 const body = document.body;

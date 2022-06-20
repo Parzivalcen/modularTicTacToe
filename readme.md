@@ -12,9 +12,15 @@ This module helps us to create our player later in the human or AI play function
 - `player.play(position)` tells the player where in the array is going to `position` the symbol that represents that player. 
 - `player.name()` is **not implemented yet**
 
-### humanPlay.js
+### playersPlay.js
+Contains the functions for Humans or AI to play depending on the button clicked one of them is called inside the **startPlay.js** module. 
 
-# DOM Manipulation
+# DOM Interacting modules
 ### startPlay.js
-StartPlay is on the page because of it interactions with the DOM. 
-It listens for a click on the game board, and it calls the function `humanPlay()` if we press inside a box of the board container. The `humanPlay()` function is imported from the game folder to **startPlay.js**
+StartPlay is on the page folder because of it interactions with the DOM. 
+
+It listens for a click on the game board, and it calls the function `humanPlay()` or `AIplay()` if we press inside a box of the board container. The `humanPlay()` and `AIplay()` functions are imported from **playersPlay.js** on the game folder to **startPlay.js**
+
+### getPosition.js
+- `getPositionFromPlayer()` get the position a player clicks on from the attribute of the board box that is clicked
+- `PositionOnDOMboard()` places a symbol on the DOM board. 

@@ -1,4 +1,4 @@
-import { humanPlay } from "../game/humanPlay";
+import { humanPlay } from "../game/playersPlay";
 
 const startPlay = () => {
   document.querySelector('.board-container').addEventListener('click', (e) =>{

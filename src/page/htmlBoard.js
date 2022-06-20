@@ -1,4 +1,4 @@
-import { humanPlay } from "../game/humanPlay";
+import { humanPlay } from "../game/playersPlay";
 
 const createBoard = () => {
   const container = document.createElement('div');

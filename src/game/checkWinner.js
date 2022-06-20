@@ -23,15 +23,18 @@ const checkWinner = () => {
   if (player1wins)
   {
     winner = 'X'
+    message = 'Player 1 wins'
   }
   else if(player2wins)
   {
     winner = 'O'
+    message = 'Player 2 wins'
   }
   else if (!gameboard.getBoard().includes(''))
   {
     winner = 'tie';
+    message = 'Tie'
   }
-  return {winner};
+  return {winner, message};
 }
 export default checkWinner;

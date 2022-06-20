@@ -3,6 +3,7 @@ import {gameboard} from './gameBoardArray.js';
 import checkWinner from './checkWinner.js';
 // Get position from player
 import {getPositionFromPlayer, PositionOnDOMboard} from '../page/getPosition.js';
+import endGame from '../page/endGameMessage.js';
 
 
 const player1 = player(1);
@@ -41,7 +42,7 @@ const humanPlay = (e, X, O) => {
   // print winner or tie on screen.
   if (checkWinner().winner || checkWinner().winner == 'tie' ) 
   {
-    // endGame();
+    endGame();
   }
   
   // LOG ARRAY
