@@ -4,6 +4,7 @@ import checkWinner from './checkWinner.js';
 // Get position from player
 import {getPositionFromPlayer, PositionOnDOMboard} from '../page/getPosition.js';
 import endGame from '../page/endGameMessage.js';
+import reset from '../page/btnReset.js';
 
 
 const player1 = player(1);
@@ -11,6 +12,7 @@ const player2 = player(2);
 let _played1 = false
 let _played2 = false
 let gameEnded =  false;
+
 const humanPlay = (e, X, O) => {
   
   let box = getPositionFromPlayer(e);
@@ -41,12 +43,13 @@ const humanPlay = (e, X, O) => {
   {
     endGame();
     gameEnded = true;
+    reset(_played1, _played2);
   }
   
   // LOG ARRAY
   console.log(gameboard.getBoard());  
   return{_played1, _played2};
 }
+const setgameEnded =(val) => gameEnded = val;
 
-
-export {humanPlay, gameEnded}
+export {humanPlay, gameEnded, setgameEnded}
