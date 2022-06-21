@@ -7,6 +7,7 @@ const endGame = () => {
   <button class="btn btn--reset">Play again</button>
     `;
   document.querySelector('.container').appendChild(win);
+  return true; 
 }
 
 export default(endGame);

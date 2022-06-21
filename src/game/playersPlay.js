@@ -10,6 +10,7 @@ const player1 = player(1);
 const player2 = player(2);
 let _played1 = false
 let _played2 = false
+let gameEnded =  false;
 const humanPlay = (e, X, O) => {
   
   let box = getPositionFromPlayer(e);
@@ -23,8 +24,6 @@ const humanPlay = (e, X, O) => {
       
       _played2 = true;
       _played1 = false;
-      console.log(_played1);
-      console.log(_played2);
     } 
     else 
     {
@@ -35,18 +34,19 @@ const humanPlay = (e, X, O) => {
       
     _played1 = true;
     _played2 = false;
-    console.log(_played1);
-    console.log(_played2);
   }
     
   // print winner or tie on screen.
   if (checkWinner().winner || checkWinner().winner == 'tie' ) 
   {
     endGame();
+    gameEnded = true;
   }
   
   // LOG ARRAY
   console.log(gameboard.getBoard());  
   return{_played1, _played2};
 }
-export {humanPlay}
+
+
+export {humanPlay, gameEnded}
