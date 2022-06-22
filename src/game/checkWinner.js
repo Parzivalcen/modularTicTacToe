@@ -1,5 +1,5 @@
 import { gameboard, positionIndex } from "./gameBoardArray";
-
+import { player1, player2 } from "./playersPlay";
 const checkWinner = () => {
   const _winCombos = [
     [0, 1, 2],
@@ -23,12 +23,12 @@ const checkWinner = () => {
   if (player1wins)
   {
     winner = 'X'
-    message = 'Player 1 wins'
+    message = `${player1.name()} wins`
   }
   else if(player2wins)
   {
     winner = 'O'
-    message = 'Player 2 wins'
+    message = `${player2.name()} wins`
   }
   else if (!gameboard.getBoard().includes(''))
   {

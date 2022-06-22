@@ -1,4 +1,4 @@
-import { humanPlay } from "../game/playersPlay";
+import { player1, player2 } from "../game/playersPlay";
 
 const createBoard = () => {
   const container = document.createElement('div');
@@ -6,7 +6,8 @@ const createBoard = () => {
   container.innerHTML = `
   <div class="title">
     <h1>Tic-Tac-Toe</h1>
-  </div>
+    </div>
+    <h1>${player1.name()} vs ${player2.name()}</h1>
   <div class="board-container">
     <div class="box" ><p data-box=0  class="symbol symbol--0"></p></div>
     <div class="box" ><p data-box=1  class="symbol symbol--1"></p></div>
@@ -20,6 +21,7 @@ const createBoard = () => {
   </div>
   <button class="btn btn--reset">reset</button>
   `
+  player1.name();
   return container
 }
 

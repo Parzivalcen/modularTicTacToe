@@ -1,5 +1,8 @@
   import {gameboard} from './gameBoardArray.js';
+  import getName from '../page/getName.js';
 
+  
+  
   const player = (number) => {
     let name = () => getName(number);  
     const play = (position) =>{

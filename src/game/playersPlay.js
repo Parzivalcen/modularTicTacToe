@@ -7,6 +7,7 @@ import endGame from '../page/endGameMessage.js';
 import reset from '../page/btnReset.js';
 
 
+
 const player1 = player(1);
 const player2 = player(2);
 let _played1 = false
@@ -23,7 +24,6 @@ const humanPlay = (e, X, O) => {
       console.log(O)
       PositionOnDOMboard(e, O);
       player2.play(box);
-      
       _played2 = true;
       _played1 = false;
     } 
@@ -52,4 +52,4 @@ const humanPlay = (e, X, O) => {
 }
 const setgameEnded =(val) => gameEnded = val;
 
-export {humanPlay, gameEnded, setgameEnded}
+export {humanPlay, gameEnded, setgameEnded, player1, player2}

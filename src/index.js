@@ -3,6 +3,8 @@ import createBoard from './page/htmlBoard.js';
 import {gameboard, positionIndex } from './game/gameBoardArray.js';
 import checkWinner from './game/checkWinner.js';
 import startPlay from './page/startPlay.js';
+
+
 import './styles.css'
 
 const body = document.body;
@@ -14,8 +16,8 @@ main.appendChild(homePage());
 const btnPlay = document.querySelector('.btn--play');
 btnPlay.addEventListener('click', (e) => {
   e.preventDefault();
-  document.querySelector('.container--home').remove();
   main.appendChild(createBoard());
+  document.querySelector('.container--home').remove();
   startPlay()
 })
 
