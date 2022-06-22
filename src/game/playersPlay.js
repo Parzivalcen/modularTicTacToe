@@ -14,6 +14,10 @@ let _played1 = false
 let _played2 = false
 let gameEnded =  false;
 
+
+// Store player name
+
+
 const humanPlay = (e, X, O) => {
   
   let box = getPositionFromPlayer(e);

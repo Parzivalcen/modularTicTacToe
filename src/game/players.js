@@ -1,10 +1,16 @@
   import {gameboard} from './gameBoardArray.js';
-  import getName from '../page/getName.js';
+  import {getName, storeName} from '../page/getName.js';
 
   
   
   const player = (number) => {
-    let name = () => getName(number);  
+    let name = () => {
+      let name = getName(number)
+      storeName(name);
+      return name
+    };  
+    
+
     const play = (position) =>{
       if (number === 1)
       {
