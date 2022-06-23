@@ -1,4 +1,5 @@
 import { player1, player2 } from "../game/playersPlay";
+import reset from "./btnReset";
 
 const createBoard = () => {
   const container = document.createElement('div');
@@ -21,7 +22,7 @@ const createBoard = () => {
   </div>
   <button class="btn btn--reset">reset</button>
   `
-  player1.name();
+  reset();
   return container
 }
 

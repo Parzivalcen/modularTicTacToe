@@ -15,15 +15,11 @@ form on a list called names.
   - Ths list names is used on the checkWinner() module for the message of who wins
   names[0] == player 1, names[1] == player 2
 */ 
-// Can you change this wihtout changing the winner module???
-const getNames = () => {
-  let names = [];
-  
-  return names
-}
-let names = []
+
+let names = [];
 const storeName = (name) => {
   names.push(name);
   return names
 }
+
 export { getName, storeName, names};

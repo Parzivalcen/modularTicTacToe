@@ -7,11 +7,13 @@ import startPlay from './page/startPlay.js';
 
 import './styles.css'
 
+
 const body = document.body;
 const main = document.createElement('main');
 body.appendChild(main);
 
 main.appendChild(homePage());
+
 // Play btn clicked
 const btnPlay = document.querySelector('.btn--play');
 btnPlay.addEventListener('click', (e) => {
