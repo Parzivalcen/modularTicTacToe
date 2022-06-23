@@ -23,4 +23,10 @@ It listens for a click on the game board, and it calls the function `humanPlay()
 
 ### getPosition.js
 - `getPositionFromPlayer()` get the position a player clicks on from the attribute of the board box that is clicked
-- `PositionOnDOMboard()` places a symbol on the DOM board. 
+- `PositionOnDOMboard()` places a symbol on the DOM board clicked. 
+
+### endGameMessage.js
+It gets called when there is a winner, it halts playing, and it displays a winner. 
+
+### btnReset.js
+When a BTN with the btn--reset class is pressed, it clears the values of the array, DOM Board, winner, turns, and it starts the game again. 

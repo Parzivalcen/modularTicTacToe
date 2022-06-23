@@ -16,11 +16,18 @@ main.appendChild(homePage());
 
 // Play btn clicked
 const btnPlay = document.querySelector('.btn--play');
+const btnPlayAI = document.querySelector('.btn--a-i')
 btnPlay.addEventListener('click', (e) => {
   e.preventDefault();
   main.appendChild(createBoard());
   document.querySelector('.container--home').remove();
-  startPlay()
+  startPlay(false)
+})
+btnPlayAI.addEventListener('click', (e) => {
+  e.preventDefault();
+  main.appendChild(createBoard());
+  document.querySelector('.container--home').remove();
+  startPlay(true)
 })
 
 

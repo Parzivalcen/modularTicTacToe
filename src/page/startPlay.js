@@ -1,13 +1,17 @@
-import { humanPlay, gameEnded } from "../game/playersPlay";
+import { humanPlay, AIplay, gameEnded } from "../game/playersPlay";
 
-const startPlay = () => {
+const startPlay = (AI) => {
   document.querySelector('.board-container').addEventListener('click', (e) =>{
     
     let symbolHTML = e.target.firstChild;
     console.log(symbolHTML);
     if(symbolHTML.classList.contains("symbol") && symbolHTML.innerHTML === '' && !gameEnded)
     {
-      humanPlay(e, 'X', 'O')
+      if (AI){
+        AIplay(e, 'X', 'O') 
+      }else{
+        humanPlay(e, 'X', 'O')
+      }
       
     }
   })
